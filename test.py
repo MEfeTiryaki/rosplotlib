@@ -170,12 +170,16 @@ class ApplicationWindow(QtWidgets.QMainWindow):
         self.statusBar().showMessage("All hail matplotlib!", 2000)
 
         # LIST
-        self.table = QTableWidget(1, 4)
+        self.table = QTableWidget(6, 4)
         self.table.setFixedHeight(100)
-        self.tableContent = {'subplot':['1'],
-        'X subscriber':['x'],
-        'Y subscriber':['y'],
-        'color':['r']}
+        self.tableContent = {'subplot':['1','1','2','2','3','3'],
+        'X subscriber':['/log/spectrum','/log/spectrum'\
+                       ,'/log/spectrum','/log/spectrum'\
+                       ,'/log/spectrum','/log/spectrum'],
+        'Y subscriber':['/log/x_projection','/log/x_projection_debug'\
+                       ,'/log/y_projection','/log/y_projection_debug'\
+                       ,'/log/z_projection','/log/z_projection_debug'],
+        'color':['b','y','b','y','b','y']}
         horHeaders = []
         for n, key in enumerate(['subplot','X subscriber',   'Y subscriber',   'color']):
             horHeaders.append(key)
